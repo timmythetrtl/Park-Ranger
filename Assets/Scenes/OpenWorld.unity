@@ -145,15 +145,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8538700999913074435, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.46
+      value: 384
       objectReference: {fileID: 0}
     - target: {fileID: 8538700999913074435, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.808
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: 8538700999913074435, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.88
+      value: 1170
       objectReference: {fileID: 0}
     - target: {fileID: 8538700999913074435, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_LocalRotation.w
@@ -399,7 +399,7 @@ Terrain:
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 250
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
@@ -451,6 +451,10 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 1994396871}
+    - target: {fileID: 3551285241882438499, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3669699700585234740, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -542,6 +546,10 @@ PrefabInstance:
     - target: {fileID: 5729544500823666813, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509884170865458632, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
