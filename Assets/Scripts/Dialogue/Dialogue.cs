@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
 
     private int index;
     private string[] lines;
+    private bool[] choices;
 
     public Vector3 onScreenPosition;
     public Vector3 offScreenPosition;
@@ -24,9 +25,10 @@ public class Dialogue : MonoBehaviour
     }
 
 
-    public void StartDialogue(string[] dialogueLines)
+    public void StartDialogue(string[] dialogueLines, bool[] dialogueChoices)
     {
         lines = dialogueLines;
+        choices = dialogueChoices;
         index = 0;
         textComponent.text = string.Empty;
         gameObject.SetActive(true);

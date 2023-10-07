@@ -9,6 +9,8 @@ public class DialogueHandler: MonoBehaviour
     public DialogueData[] dialogueData; // Reference to the DialogueData scriptable object
     public int state = 0;
 
+    //maybe make a variable for handling easter eggs specifically?
+
     public void handleDialogue()
     {
 
@@ -21,7 +23,7 @@ public class DialogueHandler: MonoBehaviour
 
             if (dialogue != null)
             {
-                dialogue.StartDialogue(dialogueData[state].lines);
+                dialogue.StartDialogue(dialogueData[state].lines, dialogueData[state].choice);
                 if (state == 0)
                     state = 1;
             }
