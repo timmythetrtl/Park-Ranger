@@ -13,6 +13,24 @@ public class JournalManager : MonoBehaviour
         // You might perform any initialization here if needed
     }
 
+    private void Update()
+    {
+        // Check for the "Escape" key press
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // If an active panel exists, close it
+            if (activePanel != null)
+            {
+                ClosePanel(activePanel);
+            }
+        }
+    }
+    public bool IsAnyPanelActive
+    {
+        get { return activePanel != null && activePanel.activeSelf; }
+    }
+
+
     public void TogglePanel(string panelName)
     {
         GameObject panel = GetPanel(panelName);
