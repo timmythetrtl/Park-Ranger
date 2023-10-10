@@ -4,5 +4,6 @@ using UnityEngine;
 public class DialogueData : ScriptableObject
 {
     public string[] lines;
+    public bool[] choice;
     public float textSpeed;
 }

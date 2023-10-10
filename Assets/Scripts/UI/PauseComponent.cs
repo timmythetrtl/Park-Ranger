@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;  // Add this line to include the necessary namespace
 
-
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
@@ -15,6 +14,7 @@ public class PauseMenu : MonoBehaviour
 
     private FPSController fpsController;
     private Interactor interactor;
+    private JournalManager journalManager; // Add reference to JournalManager
 
     private void Start()
     {
@@ -27,11 +27,14 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.LogError("Player GameObject not assigned to PauseMenu script!");
         }
+
+        // Find and store the JournalManager script reference
+        journalManager = FindObjectOfType<JournalManager>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !journalManager.IsAnyPanelActive) // Check if no panel is active
         {
             if (GameIsPaused)
             {

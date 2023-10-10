@@ -23,7 +23,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             set
             {
                 m_Action = value;
-                UpdateActionLabel();
+                //UpdateActionLabel();
                 UpdateBindingDisplay();
             }
         }
@@ -61,7 +61,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             set
             {
                 m_ActionLabel = value;
-                UpdateActionLabel();
+                //UpdateActionLabel();
             }
         }
 
@@ -499,15 +499,13 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         #if UNITY_EDITOR
         protected void OnValidate()
         {
-            UpdateActionLabel();
-            UpdateBindingDisplay();
         }
 
         #endif
 
         private void Start()
         {
-            UpdateActionLabel();
+            //UpdateActionLabel();
             UpdateBindingDisplay();
         }
 

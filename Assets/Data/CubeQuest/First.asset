@@ -15,4 +15,5 @@ MonoBehaviour:
   lines:
   - Test Dialogue
   - Gamer
+  choice: 0001
   textSpeed: 0.1
