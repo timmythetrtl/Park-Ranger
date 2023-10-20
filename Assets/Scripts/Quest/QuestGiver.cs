@@ -32,12 +32,4 @@ public class QuestGiver : MonoBehaviour, IInteractable
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        Quest.QUESTSTATUS Status = QuestManager.GetQuestStatus(QuestName);
-        if (Status == Quest.QUESTSTATUS.COMPLETE)
-        {
-        }
-    }
-
 }
