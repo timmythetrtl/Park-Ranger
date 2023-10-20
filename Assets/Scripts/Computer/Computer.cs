@@ -5,17 +5,14 @@ using UnityEngine;
 public class Computer : MonoBehaviour, IInteractable
 {
     private bool isInteracting = false;
+    private MeshRenderer meshRenderer;
+    private MeshCollider meshCollider;
 
-    private void Update()
+    private void Start()
     {
-        if (isInteracting)
-        {
-            // Check if the player presses the "Escape" key
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                StopInteracting();
-            }
-        }
+        // Get the MeshRenderer and MeshCollider components of the GameObject
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshCollider = GetComponent<MeshCollider>();
     }
 
     public void Interact()
@@ -25,6 +22,10 @@ public class Computer : MonoBehaviour, IInteractable
 
     private void StartInteracting()
     {
+        // Disable the mesh renderer and the mesh collider
+        meshRenderer.enabled = false;
+        meshCollider.enabled = false;
+
         // Enable the cursor and stop time
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -32,8 +33,12 @@ public class Computer : MonoBehaviour, IInteractable
         isInteracting = true;
     }
 
-    private void StopInteracting()
+    public void StopInteracting()
     {
+        // Enable the mesh renderer and the mesh collider
+        meshRenderer.enabled = true;
+        meshCollider.enabled = true;
+
         // Re-enable the cursor and resume time
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
