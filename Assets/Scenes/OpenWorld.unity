@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &94526302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5921623521747743521, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
+  m_PrefabInstance: {fileID: 331658208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &266927341
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +211,14 @@ PrefabInstance:
       propertyPath: journalManager
       value: 
       objectReference: {fileID: 1273792888}
+    - target: {fileID: 4271695086176810392, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
+      propertyPath: journalManager
+      value: 
+      objectReference: {fileID: 1273792888}
+    - target: {fileID: 6217322421905711146, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
+      propertyPath: crosshairImage
+      value: 
+      objectReference: {fileID: 1273792889}
     - target: {fileID: 7429031636565618664, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_Name
       value: Player
@@ -256,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8621814594856720938, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1187.8
+      value: 1358
       objectReference: {fileID: 0}
     - target: {fileID: 8621814594856720938, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_LocalPosition.y
@@ -264,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8621814594856720938, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 424
+      value: 130.1
       objectReference: {fileID: 0}
     - target: {fileID: 8692622120627615681, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: crosshairImage
@@ -855,7 +868,7 @@ PrefabInstance:
     - target: {fileID: 2137825767519055956, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
       propertyPath: playerObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 94526302}
     - target: {fileID: 3551285241882438499, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
       propertyPath: m_IsActive
       value: 0
