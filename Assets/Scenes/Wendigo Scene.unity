@@ -275,6 +275,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 635370546356882345, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+      propertyPath: panelObject
+      value: 
+      objectReference: {fileID: 1777230506}
     - target: {fileID: 5786699559185423292, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -319,6 +323,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6188541575330860629, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+      propertyPath: Quests.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188541575330860629, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+      propertyPath: Quests.Array.data[0].steps
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188541575330860629, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+      propertyPath: Quests.Array.data[0].compStep
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188541575330860629, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+      propertyPath: Quests.Array.data[0].QuestName
+      value: Walkin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188541575330860629, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+      propertyPath: Quests.Array.data[0].QuestDescription
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188541575330860629, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+      propertyPath: Quests.Array.data[0].Tasks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8935379939298336675, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
       propertyPath: m_Name
       value: QuestManager
@@ -328,6 +356,140 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0731b8f3832e5a04caef581f5834ff7d, type: 3}
+--- !u!1 &571389288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571389294}
+  - component: {fileID: 571389293}
+  - component: {fileID: 571389292}
+  - component: {fileID: 571389291}
+  - component: {fileID: 571389290}
+  - component: {fileID: 571389289}
+  m_Layer: 0
+  m_Name: TriggerTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &571389289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571389288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b00f36e75bfd64483e9e56cf64da23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 0}
+--- !u!114 &571389290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571389288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8f958722ae89740a5dac0059545874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestName: Walkin
+  Captions: {fileID: 0}
+--- !u!65 &571389291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571389288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.98, y: 1, z: 10.73}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &571389292
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571389288}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &571389293
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571389288}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &571389294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571389288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.39, y: 0.34, z: 80.08}
+  m_LocalScale: {x: 4.21, y: 1.39, z: 3.62}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574790105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9144150375149274253, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
@@ -573,6 +735,10 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 1594391734}
+    - target: {fileID: 3551285241882438499, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3669699700585234740, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -670,6 +836,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
+--- !u!1 &1777230506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5571098201035513573, guid: c867e7b8834bfea48b7d6d1d4f145060, type: 3}
+  m_PrefabInstance: {fileID: 1777230505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1800636747
 GameObject:
   m_ObjectHideFlags: 0
