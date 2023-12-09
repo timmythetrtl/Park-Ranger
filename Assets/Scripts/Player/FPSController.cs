@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem; // Make sure to include the Input System namespace
+using UnityEngine.InputSystem; 
+using Cinemachine;
 
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
 {
-    public Camera playerCamera;
+    public CinemachineVirtualCamera playerCamera; // Change the type to CinemachineVirtualCamera
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
@@ -15,7 +16,8 @@ public class FPSController : MonoBehaviour
     public float lookSpeed = 2f;
     public float lookXLimit = 45f;
 
-    private PlayerInput playerInput; // Reference to the Player Input component
+    private PlayerInput playerInput; 
+    private Transform playerTransform; // Store the player's transform separately
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
@@ -30,6 +32,8 @@ public class FPSController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        playerTransform = transform; // Cache the player's transform
+
         // Get the reference to the Player Input component attached to the player object
         playerInput = GetComponent<PlayerInput>();
     }
@@ -38,10 +42,9 @@ public class FPSController : MonoBehaviour
     {
         #region Handles Movement
         Vector2 movementInput = playerInput.actions["Movement"].ReadValue<Vector2>();
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
+        Vector3 forward = playerTransform.TransformDirection(Vector3.forward); // Use the cached player's transform
+        Vector3 right = playerTransform.TransformDirection(Vector3.right);
 
-        // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * movementInput.y : 0;
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * movementInput.x : 0;
@@ -68,14 +71,24 @@ public class FPSController : MonoBehaviour
         #region Handles Rotation
         characterController.Move(moveDirection * Time.deltaTime);
 
-        if (canMove && Time.timeScale > 0f) // Check if the game is not paused
-        {
-            rotationX += -playerInput.actions["Look"].ReadValue<Vector2>().y * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, playerInput.actions["Look"].ReadValue<Vector2>().x * lookSpeed, 0);
-        }
+        // Inside the Update method
+if (canMove && Time.timeScale > 0f && playerCamera != null)
+{
+    CinemachineOrbitalTransposer orbitalTransposer = playerCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
+
+    if (orbitalTransposer != null)
+    {
+        orbitalTransposer.m_BindingMode = CinemachineTransposer.BindingMode.WorldSpace;
+        orbitalTransposer.m_XAxis.Value = rotationX;
+    }
+
+    rotationX += -playerInput.actions["Look"].ReadValue<Vector2>().y * lookSpeed;
+    rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+
+    playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+    transform.rotation *= Quaternion.Euler(0, playerInput.actions["Look"].ReadValue<Vector2>().x * lookSpeed, 0);
+}
+
         #endregion
     }
 }
-
