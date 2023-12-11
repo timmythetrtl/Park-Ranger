@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 349791326}
     - target: {fileID: 7065141134298616324, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8621814594856720938, guid: 5f2f635dfc276d249812670d8b826371, type: 3}
       propertyPath: m_RootOrder
@@ -1083,7 +1083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &868004572
 Animator:
   serializedVersion: 5
@@ -1248,7 +1248,7 @@ PlayableDirector:
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 4677553003286646365, guid: 28c8ff7ecc6c1fe43b6e679d002454c1, type: 2}
-    value: {fileID: 299003046}
+    value: {fileID: 868004571}
   - key: {fileID: 2366613404832870113, guid: 28c8ff7ecc6c1fe43b6e679d002454c1, type: 2}
     value: {fileID: 853379200}
   m_ExposedReferences:
