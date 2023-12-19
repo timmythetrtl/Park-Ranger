@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d559ec07676f794ea460d4324322121, type: 3}
   m_Name: Road Profile
   m_EditorClassIdentifier: 
-  splineMaterial: {fileID: 2100000, guid: 92db6935da929724c9e8af0522d64576, type: 2}
+  splineMaterial: {fileID: 2100000, guid: c1ed87fbe3ed40845bfbde4ad9e67bd0, type: 2}
   meshCurve:
     serializedVersion: 2
     m_Curve:
