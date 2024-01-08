@@ -15,18 +15,18 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.4901961, g: 0.56078434, b: 0.7490196, a: 1}
+  m_FogColor: {r: 0.066037714, g: 0.059496243, b: 0.059496243, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.001
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
-  m_AmbientEquatorColor: {r: 0.07213906, g: 0.0495283, b: 0.1981132, a: 1}
-  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientSkyColor: {r: 0.006512091, g: 0.00699541, b: 0.0074990317, a: 1}
+  m_AmbientEquatorColor: {r: 0.030704873, g: 0.03166403, b: 0.09433961, a: 1}
+  m_AmbientGroundColor: {r: 0.025898905, g: 0.0287998, b: 0.05660379, a: 1}
   m_AmbientIntensity: 2.43
   m_AmbientMode: 1
-  m_SubtractiveShadowColor: {r: 0.51303846, g: 0.5360482, b: 0.5943396, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 9e8aac03ad10f1642bf0464f70ec125f, type: 2}
+  m_SubtractiveShadowColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45976627, g: 0.4757111, b: 0.5213564, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4796,7 +4796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1881708847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5250,12 +5250,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7863655173272156812, guid: e94fc4879948ea0419ce9a38bd831db2, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863655173272156812, guid: e94fc4879948ea0419ce9a38bd831db2, type: 3}
       propertyPath: far clip plane
       value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 7863655173272156812, guid: e94fc4879948ea0419ce9a38bd831db2, type: 3}
       propertyPath: near clip plane
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863655173272156812, guid: e94fc4879948ea0419ce9a38bd831db2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863655173272156812, guid: e94fc4879948ea0419ce9a38bd831db2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863655173272156812, guid: e94fc4879948ea0419ce9a38bd831db2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9021512697180017816, guid: e94fc4879948ea0419ce9a38bd831db2, type: 3}
       propertyPath: m_DefaultBlend.m_Style
